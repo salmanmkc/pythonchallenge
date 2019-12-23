@@ -6,25 +6,27 @@ import pickle
 def replace(s: str):
     i = 36379
     count = 0
-    while count < 400:
-        link = "http://www.pythonchallenge.com/pc/def/banner.p"
-        fp = urllib.request.urlopen(link)
-        #i += 1
-        mybytes = fp.read()
-        mystr = mybytes.decode("utf8")
-        stuff = mystr.splitlines()
 
-        
+    link = "http://www.pythonchallenge.com/pc/def/banner.p"
+    fp = urllib.request.urlopen(link)
+    #i += 1
+    mybytes = fp.read()
+    mystr = mybytes.decode("utf8")
+    stuff = mystr.splitlines()
 
-        # i = mystr.split(" ")[-1]
-        # fp.close()
+    
 
-        # stuff = pickle.load(open(mybytes, "rb"))
-        # stuff2 = stuff.decode("utf-8")
-        
-        print(pickle.loads(mybytes))
-        # print(i)
-        #print(link)
+    # i = mystr.split(" ")[-1]
+    # fp.close()
+
+    # stuff = pickle.load(open(mybytes, "rb"))
+    # stuff2 = stuff.decode("utf-8")
+    
+    print(len(pickle.loads(mybytes)))
+    print(23*95)
+    
+    # print(i)
+    #print(link)
 
     
 
