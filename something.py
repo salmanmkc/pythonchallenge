@@ -1,16 +1,29 @@
 
 import re
 import urllib.request
+import pickle
+
 def replace(s: str):
-    count = 12345
-    for i in range(12345, 12745):
-        link = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + str(i)
+    i = 36379
+    count = 0
+    while count < 400:
+        link = "http://www.pythonchallenge.com/pc/def/banner.p"
         fp = urllib.request.urlopen(link)
-        i += 1
+        #i += 1
         mybytes = fp.read()
         mystr = mybytes.decode("utf8")
-        fp.close()
-        print(mystr)
+        stuff = mystr.splitlines()
+
+        
+
+        # i = mystr.split(" ")[-1]
+        # fp.close()
+
+        # stuff = pickle.load(open(mybytes, "rb"))
+        # stuff2 = stuff.decode("utf-8")
+        
+        print(pickle.loads(mybytes))
+        # print(i)
         #print(link)
 
     
